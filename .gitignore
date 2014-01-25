@@ -1,0 +1,11 @@
+Library/
+Temp/
+Obj/
+*.csproj
+*.booproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.DS_store
+*.sublime-workspace
