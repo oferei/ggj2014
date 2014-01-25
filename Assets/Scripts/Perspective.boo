@@ -4,10 +4,15 @@ class Perspective (MonoBehaviour):
 
 	public lookTarget as GameObject
 
+	_alreadyHappened = false
+
 	def OnTouchedAltar ():
+		return if _alreadyHappened
+		_alreadyHappened = true
 		Debug.Log("touched the altar")
+
 		Camera.main.GetComponent[of FadeCamera]().fadeOut(Color.white, 1.2)
-		Invoke("fadeIn", 5)
+		Invoke("fadeIn", 3)
 
 	def fadeIn():
 		Camera.main.orthographic = true
