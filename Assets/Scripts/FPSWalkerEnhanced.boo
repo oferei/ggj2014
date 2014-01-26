@@ -19,6 +19,9 @@ class FPSWalkerEnhanced (MonoBehaviour):
 	public jumpSpeed = 8.0;
 	public gravity = 20.0;
 
+	public footstepSound1 as AudioClip
+	public footstepSound2 as AudioClip
+
 	origPosition as Vector3
 
 	# Units that player can fall before a falling damage function is run. To disable, type "infinity" in the inspector
@@ -54,6 +57,8 @@ class FPSWalkerEnhanced (MonoBehaviour):
 	private contactPoint as Vector3
 	private playerControl = false
 	private jumpTimer as int
+
+	private stepCounter as single = 0
 
 	def Start ():
 		controller = GetComponent(CharacterController)
@@ -140,6 +145,13 @@ class FPSWalkerEnhanced (MonoBehaviour):
 		grounded = ((controller.Move(moveDirection * Time.deltaTime) & CollisionFlags.Below) != 0)
 		grounded = true
 		myTransform.position.y = origPosition.y
+
+		oldStep as int = Mathf.RoundToInt(stepCounter)
+		stepCounter += moveDirection.magnitude / 100
+		newStep as int = Mathf.RoundToInt(stepCounter)
+		if oldStep != newStep:
+			audio.clip = (footstepSound1 if newStep % 2 else footstepSound2)
+			audio.Play()
 
 	def Update ():
 		# If the run button is set to toggle, then switch between walk/run speed. (We use Update for this...
