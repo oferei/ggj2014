@@ -144,7 +144,9 @@ class FPSWalkerEnhanced (MonoBehaviour):
 		moveDirection.y = 0
 		grounded = ((controller.Move(moveDirection * Time.deltaTime) & CollisionFlags.Below) != 0)
 		grounded = true
-		myTransform.position.y = origPosition.y
+		
+		#myTransform.position.y = origPosition.y
+		controller.Move(Vector3(0, -1, 0))
 
 		oldStep as int = Mathf.RoundToInt(stepCounter)
 		stepCounter += moveDirection.magnitude / 100
