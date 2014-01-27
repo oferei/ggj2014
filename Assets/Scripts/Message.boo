@@ -1,14 +1,17 @@
 #import UnityEngine
 
-class Message:
+class Message(Object):
 
-	FunctionName:
+	functionName:
 	""" Method name in listener components """
 		get:
 			return _functionName
 	_functionName as string
 
-	BaseClasses:
+	static def genFunctionName(type as System.Type):
+		return 'OnMsg' + type.ToString()[7:]
+
+	baseClasses:
 	""" Inheritance route """
 		get:
 			return _baseClasses
@@ -20,11 +23,11 @@ class Message:
 		# replace 'Message' with 'OnMsg'
 		_functionName = 'OnMsg' + self.GetType().ToString()[7:]
 
-		_baseClasses = array(System.Type, GetBaseClasses())
+		_baseClasses = array(System.Type, getBaseClasses())
 
-		God.Inst.Hermes.Send(self)
+		God.inst.hermes.send(self)
 
-	protected def GetBaseClasses():
+	protected def getBaseClasses():
 	""" Generates inheritance route """
 	
 		msgType = self.GetType()

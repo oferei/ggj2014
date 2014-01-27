@@ -2,8 +2,7 @@
 
 class Powerup (MonoBehaviour): 
 
-	public target as GameObject
-	public material as Material
+	public skin as Skin
 
 	def OnTriggerEnter(otherCollider as Collider):
-		target.renderer.material = material
+		MessageSkin(skin)

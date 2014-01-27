@@ -1,11 +1,25 @@
-import UnityEngine
+#import UnityEngine
+import System.Collections
 
 class Messenger:
 
-	_listeners = {}
+	callable MessageHandler(msg as Message)
+
+	class Listener:
+
+		[Property(script)]
+		_script as UnityEngine.MonoBehaviour
+
+		[Property(method)]
+		_method as System.Reflection.MethodInfo
+
+		#[Property(delegate)]
+		#_delegate as MessageHandler #System.Delegate
+
+	_listeners = Generic.Dictionary[of System.Type /*Message*/, Generic.List[of Listener]]()
 	""" Enlisted listeners. """
 
-	def Listen(msgType as System.Type, listener as MonoBehaviour):
+	def listen(msgType as System.Type, listeningScript as UnityEngine.MonoBehaviour):
 	""" Starts listening to messages derived from the specified type. """
 	
 		# verify type inherits from Message
@@ -14,35 +28,42 @@ class Messenger:
 
 		# get list (create if necessary)
 		if msgType not in _listeners:
-			_listeners[msgType] = []
-		list as List = _listeners[msgType]
+			_listeners[msgType] = Generic.List[of Listener]()
+		list = _listeners[msgType]
 		
 		# add listener
-		if listener not in list:
-			list.Add(listener)
+		functionName = Message.genFunctionName(msgType)
+		method = listeningScript.GetType().GetMethod(functionName)
+		#delegate = System.Delegate.CreateDelegate(MessageHandler, method) cast MessageHandler
+		newListener = Listener(script: listeningScript, method: method/*, delegate: delegate*/)
+		if newListener not in list:
+			list.Add(newListener)
 	
-	def StopListening(msgType as System.Type, listener as MonoBehaviour):
+	def stopListening(msgType as System.Type, listeningScript as UnityEngine.MonoBehaviour):
 	""" Stops listening to messages derived from the specified type. """
 	
 		# get list
-		list as List = _listeners[msgType]
-		return unless list
+		return if msgType not in _listeners
+		list = _listeners[msgType]
 
 		# remove listener
-		list.Remove(listener)
+		for listener in list:
+			if listener.script == listeningScript:
+				list.Remove(listener)
+				return
 
-	def Send(msg as Message):
+	def send(msg as Message):
 	""" Dispatches a message. """
 
 		# send message (to listeners of base classes too)
-		for msgType in msg.BaseClasses:
+		for msgType in msg.baseClasses:
 			# get list
-			list = _listeners[msgType]
-			continue unless list
+			continue if msgType not in _listeners
+			list as (Listener) = _listeners[msgType].ToArray()
 			
 			# send to all listeners
-			for listener as MonoBehaviour in list:
-				# invoke component method by name
-				cb = listener.GetType().GetMethod(msg.FunctionName)
-				if cb: cb.Invoke(listener, (msg,))
+			for listener as Listener in list:
+				if listener.method:
+					listener.method.Invoke(listener.script, (msg,))
+					#listener.delegate(msg)
 	

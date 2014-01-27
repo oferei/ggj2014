@@ -50,7 +50,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -157,7 +157,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 0
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -174,8 +174,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2263721da0b857b4f997404c15c12756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  material: {fileID: 2100000, guid: 9c8f148f274000f4783e13d6b4d2b48f, type: 2}
+  skin:
+    templeOuterMaterial: {fileID: 2100000, guid: 9c8f148f274000f4783e13d6b4d2b48f,
+      type: 2}
+    templeInnerMaterial: {fileID: 2100000, guid: fa6425fdb765f7245b5265b326c01f65,
+      type: 2}
+    templeColumnsMaterial: {fileID: 2100000, guid: d00729cf4b3a0bd4e844582924e26988,
+      type: 2}
+    templeColumns5Material: {fileID: 2100000, guid: 705d1d321c3870748a339c36846119ee,
+      type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

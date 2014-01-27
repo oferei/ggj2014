@@ -1,41 +1,31 @@
-import UnityEngine
+#import UnityEngine
 
 class God():
-
-	static Inst as God:
+	
+	static inst as God:
 	""" Calls upon God """
 		get:
 			God() unless _instance
 			return _instance
 	static _instance as God
-
-	Hermes:
+	
+	hermes:
 	""" The messenger """
 		get:
 			return _hermes
 	_hermes as Messenger
-
-	Ground:
-	""" The ground """
+	
+	soundVolume:
+	""" Master sound volume """
 		get:
-			return _ground
+			return _soundVolume
 		set:
-			assert not _ground
-			_ground = value
-	_ground as Transform
-
-	Player:
-	""" The Player's BADAS """
-		get:
-			return _player
-		set:
-			assert not _player
-			_player = value
-	_player as Transform
-
-	private def constructor ():
+			_soundVolume = value
+	_soundVolume as single = 1
+	
+	private def constructor():
 	""" Wakes up God """
 	
-		Debug.Log("Beware, I live!")
+		UnityEngine.Debug.Log("Beware, I live!")
 		_instance = self
 		_hermes = Messenger()
