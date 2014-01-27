@@ -540,7 +540,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 2
-  m_LightmapTilingOffset: {x: .0185546875, y: .0185546875, z: .933482468, w: -.000132498913}
+  m_LightmapTilingOffset: {x: .0185546875, y: .0185546875, z: .628794968, w: -.000132498913}
   m_Materials:
   - {fileID: 2100000, guid: 853f8495b01a08a429bc03e4592bf39d, type: 2}
   m_SubsetIndices: 
@@ -2610,7 +2610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0d02d007f81494d4ea0d7690f555e76f, type: 3}
       propertyPath: m_LightmapTilingOffset.z
-      value: .933482468
+      value: .628794968
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0d02d007f81494d4ea0d7690f555e76f, type: 3}
       propertyPath: m_LightmapTilingOffset.w
@@ -6412,7 +6412,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1880986667}
   m_LocalRotation: {x: -.642397642, y: .603076637, z: -.174664021, w: -.439450085}
-  m_LocalPosition: {x: -.291781545, y: 20.0398197, z: -28.8930092}
+  m_LocalPosition: {x: 32.2030182, y: 20, z: 17.8852139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
