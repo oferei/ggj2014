@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using System.Collections;
 
@@ -83,4 +84,13 @@ public class MouseLook : MonoBehaviour {
 			angle -= 360F;
 		return Mathf.Clamp (angle, min, max);
 	}
+
+	void reset()
+	{
+		originalRotation = transform.localRotation;
+		rotationX = 0F;
+		rotationY = 0F;
+	}
 }
+
+*/

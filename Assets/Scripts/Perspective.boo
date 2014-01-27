@@ -14,7 +14,9 @@ class Perspective (MonoBehaviour):
 
 	def fadeIn():
 		Camera.main.orthographic = true
-		Camera.main.transform.LookAt(lookTarget)
-		Camera.main.transform.eulerAngles.x = 0;
-		Camera.main.transform.eulerAngles.z = 0;
 		Camera.main.GetComponent[of FadeCamera]().fadeIn(Color.white, 4.0)
+
+		transform.LookAt(lookTarget)
+		transform.eulerAngles.x = 0;
+		transform.eulerAngles.z = 0;
+		GetComponent[of MouseLook]().reset()
