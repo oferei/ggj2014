@@ -19,7 +19,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .102941155, g: .102941155, b: .102941155, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 16522f49031ff414abdf1f83f1b6a36c, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -891,6 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flipClip: {fileID: 8300000, guid: 5cf108c876021684a9c1d1c977c3a235, type: 3}
   trippinClip: {fileID: 8300000, guid: 07a54bcb9a291b644bdd194e5bd5c591, type: 3}
+  trippinSkybox: {fileID: 2100000, guid: 9ba05f538ee36044da5cd2a4f14a8b18, type: 2}
 --- !u!82 &279130501
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4853,10 +4854,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 623102368}
+  - {fileID: 1305349428}
   - {fileID: 643559367}
   - {fileID: 338307015}
-  - {fileID: 1305349428}
+  - {fileID: 623102368}
   m_Father: {fileID: 1559248565}
 --- !u!1 &1305349427
 GameObject:
@@ -7063,7 +7064,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1990678446}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 11.0000019, y: .569999993, z: 29.4170856}
+  m_LocalPosition: {x: 11.0000076, y: .569999993, z: 29.7927933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 951346902}
