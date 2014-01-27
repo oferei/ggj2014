@@ -3987,6 +3987,7 @@ GameObject:
   - 33: {fileID: 1001449710}
   - 23: {fileID: 1001449709}
   - 95: {fileID: 1001449708}
+  - 64: {fileID: 1001449711}
   m_Layer: 0
   m_Name: Black Crystall Temple
   m_TagString: Untagged
@@ -4049,6 +4050,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 1505702889}
   m_GameObject: {fileID: 1001449706}
+  m_Mesh: {fileID: 4300038, guid: 1ffd5b6074dc64c4eb9b3719f9e1bfed, type: 3}
+--- !u!64 &1001449711
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001449706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300038, guid: 1ffd5b6074dc64c4eb9b3719f9e1bfed, type: 3}
 --- !u!1 &1016004618
 GameObject:
