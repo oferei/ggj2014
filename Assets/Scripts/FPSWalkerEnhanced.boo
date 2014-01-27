@@ -142,6 +142,7 @@ class FPSWalkerEnhanced (MonoBehaviour):
 
 		# Move the controller, and set grounded true or false depending on whether we're standing on something
 		moveDirection.y = 0
+		oldPosition = transform.position
 		grounded = ((controller.Move(moveDirection * Time.deltaTime) & CollisionFlags.Below) != 0)
 		grounded = true
 		
@@ -149,7 +150,7 @@ class FPSWalkerEnhanced (MonoBehaviour):
 		controller.Move(Vector3(0, -1, 0))
 
 		oldStep as int = Mathf.RoundToInt(stepCounter)
-		stepCounter += moveDirection.magnitude / 100
+		stepCounter += Vector3.Distance(oldPosition, transform.position) / 2
 		newStep as int = Mathf.RoundToInt(stepCounter)
 		if oldStep != newStep:
 			audio.clip = (footstepSound1 if newStep % 2 else footstepSound2)
