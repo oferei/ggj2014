@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 135: {fileID: 13500000}
   m_Layer: 0
-  m_Name: Powerup Mayan
+  m_Name: Mayan power-up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
