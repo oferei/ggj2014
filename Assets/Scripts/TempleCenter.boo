@@ -2,16 +2,24 @@
 
 class TempleCenter (MonoBehaviour): 
 
-	public altClip as AudioClip
+	public flipClip as AudioClip
+	public trippinClip as AudioClip
 
 	def OnTriggerEnter(otherCollider as Collider):
 		otherCollider.SendMessage("OnTouchedAltar")
 
-		audio.Stop()
-		audio.clip = altClip
-		audio.PlayDelayed(5)
-
 		trigger = GetComponent[of SphereCollider]()
 		trigger.enabled = false
 
+		audio.Stop()
 
+		audio.clip = flipClip
+		audio.loop = false
+		audio.Play()
+
+		Invoke("playTripping", 10)
+
+	def playTripping():
+		audio.clip = trippinClip
+		audio.loop = true
+		audio.Play()

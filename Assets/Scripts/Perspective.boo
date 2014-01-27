@@ -5,8 +5,8 @@ class Perspective (MonoBehaviour):
 	public lookTarget as Transform
 
 	def OnTouchedAltar ():
-		Camera.main.GetComponent[of FadeCamera]().fadeOut(Color.white, 1.2)
-		Invoke("fadeIn", 3)
+		Camera.main.GetComponent[of FadeCamera]().fadeOut(Color.white, 2)
+		Invoke("fadeIn", 5.5)
 
 	def fadeIn():
 		Camera.main.orthographic = true
