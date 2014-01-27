@@ -1958,7 +1958,7 @@ Transform:
   m_PrefabInternal: {fileID: 2076915202}
   m_GameObject: {fileID: 501696257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.20399284, y: .300000012, z: -3.5282402}
+  m_LocalPosition: {x: 12.7544374, y: .300000012, z: -3.5282402}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 894658334}
@@ -2229,6 +2229,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 562724814}
   - 95: {fileID: 562724815}
+  - 135: {fileID: 562724816}
   m_Layer: 0
   m_Name: goose
   m_TagString: Untagged
@@ -2243,7 +2244,7 @@ Transform:
   m_PrefabInternal: {fileID: 646576735}
   m_GameObject: {fileID: 562724813}
   m_LocalRotation: {x: 0, y: -.889177799, z: 0, w: .45756191}
-  m_LocalPosition: {x: 10.2847872, y: 0, z: -3.63454223}
+  m_LocalPosition: {x: 9.93780804, y: .0255116224, z: -3.63454223}
   m_LocalScale: {x: .223874241, y: .223874241, z: .223874241}
   m_Children:
   - {fileID: 146972906}
@@ -2263,6 +2264,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
+--- !u!135 &562724816
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 562724813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .699999988
+  m_Center: {x: .00999999978, y: .680000007, z: -.0900000036}
 --- !u!1 &571174519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,11 +2501,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 0d02d007f81494d4ea0d7690f555e76f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.2847872
+      value: 9.93780804
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0d02d007f81494d4ea0d7690f555e76f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .0255116224
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0d02d007f81494d4ea0d7690f555e76f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8178,7 +8191,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: d9e3498c2207fd241924300c3acce506, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.20399284
+      value: 12.7544374
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d9e3498c2207fd241924300c3acce506, type: 2}
       propertyPath: m_LocalPosition.y
