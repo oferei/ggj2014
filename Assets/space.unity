@@ -2136,7 +2136,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 562724814}
   - 95: {fileID: 562724815}
-  - 135: {fileID: 562724816}
+  - 136: {fileID: 562724816}
   m_Layer: 0
   m_Name: goose
   m_TagString: Untagged
@@ -2171,8 +2171,8 @@ Animator:
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
---- !u!135 &562724816
-SphereCollider:
+--- !u!136 &562724816
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2180,8 +2180,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: .699999988
+  m_Height: 20
+  m_Direction: 1
   m_Center: {x: .00999999978, y: .680000007, z: -.0900000036}
 --- !u!1 &571174519
 GameObject:
