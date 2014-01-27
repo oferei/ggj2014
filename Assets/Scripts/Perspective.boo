@@ -5,7 +5,7 @@ class Perspective (MonoBehaviour):
 	public lookTarget as Transform
 
 	def OnTouchedAltar ():
-		Camera.main.GetComponent[of FadeCamera]().fadeOut(Color.white, 2)
+		Camera.main.GetComponent[of FadeCamera]().fadeOut(Color.white, 3)
 		Invoke("fadeIn", 5.5)
 
 	def fadeIn():
