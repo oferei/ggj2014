@@ -2081,7 +2081,7 @@ GameObject:
   - 135: {fileID: 501696259}
   - 114: {fileID: 501696260}
   m_Layer: 0
-  m_Name: Mayan power-up
+  m_Name: Mayan black power-up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
