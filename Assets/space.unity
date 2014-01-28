@@ -8268,10 +8268,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2046130486}
-  - {fileID: 2120912616}
-  - {fileID: 973723161}
   - {fileID: 1629947204}
+  - {fileID: 973723161}
+  - {fileID: 2120912616}
+  - {fileID: 2046130486}
   m_Father: {fileID: 1559248565}
 --- !u!1 &2072036613
 GameObject:
