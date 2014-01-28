@@ -44,6 +44,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 135: {fileID: 13500000}
   - 114: {fileID: 11400000}
+  - 82: {fileID: 8200000}
   m_Layer: 0
   m_Name: Mayan brown power-up
   m_TagString: Untagged
@@ -95,10 +96,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: .0419921875, y: .0419921875, z: .618408203, w: -1.25146471e-09}
   m_Materials:
-  - {fileID: 2100000, guid: fd318e68ef0728b42af72f4bc5634e87, type: 2}
+  - {fileID: 2100000, guid: 7884f04c0923161428c16ede6c18f150, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -114,6 +115,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 4300000, guid: 091b271b11a89b5459542dd1e332cf72, type: 3}
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 958c62f84c32e5147b3d330c161611a3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -175,13 +234,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin:
-    templeOuterMaterial: {fileID: 2100000, guid: 9c8f148f274000f4783e13d6b4d2b48f,
+    templeOuterMaterial: {fileID: 2100000, guid: f467f65c0735cfb41bf163cbd446ce2c,
       type: 2}
-    templeInnerMaterial: {fileID: 2100000, guid: fa6425fdb765f7245b5265b326c01f65,
+    templeInnerMaterial: {fileID: 2100000, guid: 2a35b586f6ee94540a8aa7e2ab19f8ef,
       type: 2}
-    templeColumnsMaterial: {fileID: 2100000, guid: d00729cf4b3a0bd4e844582924e26988,
+    templeColumnsMaterial: {fileID: 2100000, guid: 270a05aad22390a48a50db9d1532ca28,
       type: 2}
-    templeColumns5Material: {fileID: 2100000, guid: 705d1d321c3870748a339c36846119ee,
+    templeColumns5Material: {fileID: 2100000, guid: 3cb7c31c1abeb7946b4c137bb476948d,
       type: 2}
 --- !u!135 &13500000
 SphereCollider:

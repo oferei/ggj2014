@@ -6,3 +6,4 @@ class Powerup (MonoBehaviour):
 
 	def OnTriggerEnter(otherCollider as Collider):
 		MessageSkin(skin)
+		audio.Play()
