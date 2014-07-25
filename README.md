@@ -7,8 +7,7 @@ For more details and playable version:
 http://globalgamejam.org/2014/games/come-and-take-my-herb
 
 Credits:
-* Ofer Reichman - programming
-* Roy Bass & Nir Asis - programming
-* Anna Strebkov - graphics, 3D modeling, narrative
-* Idan Egozy - sound
-* Assaf Ronen - production
+* Programming: Ofer Reichman, Roy Bass & Nir Asis
+* Graphics, 3D modeling & narrative: Anna Strebkov
+* Sound: Idan Egozy
+* Production: Assaf Ronen
